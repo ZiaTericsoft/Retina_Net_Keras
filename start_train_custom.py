@@ -324,8 +324,8 @@ if __name__ == "__main__":
     once_send = 'Project : ' +str(project_name) +' Backbone : '+ str(opt.backbone) +'  '
     try:
         print('Training has been started')
-        # send_tele('Training Has Been Started ')
-        # send_tele(once_send)
+        send_tele('Training Has Been Started ')
+        send_tele(once_send)
     except:
         pass
 
@@ -340,7 +340,7 @@ if __name__ == "__main__":
             # # 10/10 [==============================] - 35s 3s/step - loss: 4.1784 - regression_loss: 3.0459 - classification_loss: 1.1325
             try:
                 print("Fuck you have epoch here")
-                # send_tele(out.decode("utf-8"))
+                send_tele(out.decode("utf-8"))
             except:
                 pass
         epoch = all_op.find("Epoch")
@@ -355,7 +355,7 @@ if __name__ == "__main__":
                 epoch_save_number = int(count_save.split(' ')[-1])
                 if epoch_save_number == opt.epochs:
                     print('training has been ended')
-                    # send_tele('Training has been Ended \n')
+                    send_tele('Training has been Ended \n')
                     p.terminate() # send sigterm, or ...
                     p.kill()      # send sigkill
                     break
@@ -363,7 +363,7 @@ if __name__ == "__main__":
                 pass
             try:
                 print("What the fuck is this")
-                # send_tele(out.decode("utf-8"))
+                send_tele(out.decode("utf-8"))
             except:
                 pass
 
@@ -371,7 +371,7 @@ if __name__ == "__main__":
         if map_is != -1:
             try:
                 print("What the fuck is this")
-                # send_tele(out.decode('utf-8'))
+                send_tele(out.decode('utf-8'))
             except:
                 pass
         # average precision
